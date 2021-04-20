@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mangomarket/screen/login.dart';
 
 import 'screen/signup.dart';
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: SignUp(),
+      home: Login(),
     );
   }
 }

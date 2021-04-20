@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:mangomarket/screen/login.dart';
 
 class SignUp extends StatefulWidget {
   @override
@@ -12,16 +13,16 @@ String p =
 RegExp regExp = new RegExp(p);
 bool obserText = true;
 
-class _SignUpState extends State<SignUp> {
-  void vaildation() {
-    final FormState _from = _formKey.currentState;
-    if (_from.validate()) {
-      print('Yes');
-    } else {
-      print('No');
-    }
+void vaildation() {
+  final FormState _from = _formKey.currentState;
+  if (_from.validate()) {
+    print('Yes');
+  } else {
+    print('No');
   }
+}
 
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -145,6 +146,7 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text('I have already an account!'),
                           SizedBox(width: 10),
@@ -154,6 +156,10 @@ class _SignUpState extends State<SignUp> {
                               style:
                                   TextStyle(color: Colors.cyan, fontSize: 20),
                             ),
+                            onTap: () {
+                              Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(builder: (ctx) => Login()));
+                            },
                           )
                         ],
                       ),
