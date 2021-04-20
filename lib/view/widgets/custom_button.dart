@@ -15,11 +15,14 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      padding: EdgeInsets.all(18),
+    return TextButton(
+      style: TextButton.styleFrom(
+        backgroundColor: primaryColor,
+        padding: EdgeInsets.all(18),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      ),
       onPressed: onPressed,
-      color: primaryColor,
+      // color: primaryColor,
       child: CustomText(
         text: text,
         alignment: Alignment.center,
