@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:mangomarket/view/widgets/custom_button.dart';
+import 'package:mangomarket/view/widgets/custom_button_social.dart';
 import 'package:mangomarket/view/widgets/custom_text.dart';
 import 'package:mangomarket/view/widgets/custom_text_form_field.dart';
 
@@ -60,7 +61,29 @@ class LoginScreen extends StatelessWidget {
               text: 'Forget Password?',
               fontSize: 14,
               alignment: Alignment.topRight,
-            )
+            ),
+            SizedBox(height: 20),
+            CustomButton(
+              text: 'SIGN IN',
+              onPressed: () {},
+            ),
+            SizedBox(height: 30),
+            CustomText(
+              text: '-- OR --',
+              alignment: Alignment.center,
+            ),
+            SizedBox(height: 30),
+            CustomButtonSocial(
+              text: 'Sign in with Google',
+              imageName: 'assets/images/google.png',
+              onPressed: () {},
+            ),
+            SizedBox(height: 20),
+            CustomButtonSocial(
+              text: 'Sign in with Facebook',
+              imageName: 'assets/images/facebook.png',
+              onPressed: () {},
+            ),
           ],
         ),
       ),
