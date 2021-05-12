@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mangomarket/view/auth/second_sereen.dart';
 import 'package:mangomarket/view/widgets/custom_button.dart';
 import 'package:mangomarket/view/widgets/custom_button_social.dart';
 import 'package:mangomarket/view/widgets/custom_text.dart';
@@ -10,10 +12,10 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0.0,
-        backgroundColor: Colors.white,
-      ),
+      // appBar: AppBar(
+      //   elevation: 0.0,
+      //   backgroundColor: Colors.white,
+      // ),
       body: Padding(
         padding: const EdgeInsets.only(
           top: 50,
@@ -65,7 +67,9 @@ class LoginScreen extends StatelessWidget {
             SizedBox(height: 20),
             CustomButton(
               text: 'SIGN IN',
-              onPressed: () {},
+              onPressed: () {
+                Get.to(SecondScreen());
+              },
             ),
             SizedBox(height: 30),
             CustomText(
