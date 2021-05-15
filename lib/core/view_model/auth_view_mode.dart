@@ -1,7 +1,8 @@
 import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:get/get.dart';
 
 class AuthViewModel extends GetxController {
-  int counter = 0;
+  var counter = 0.obs;
 
   @override
   void onInit() {
